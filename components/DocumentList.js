@@ -13,7 +13,7 @@ var DocumentList = React.createClass({
     var cards = [];
     var actions = this.props.actions;
     if (this.props.documents) {
-      this.props.documents.forEach(function(document, index) {
+      this.props.documents.forEach(function(document) {
         cards.push(<DocumentCard {...document} key={document.id} actions={actions} />);
       });
     }

@@ -8,6 +8,15 @@ Write an application using Facebook React and the Flux architecture. This applic
 
 3. Every docume nt has a “ Pin” button that pins the element on top of the list. Once a document is pinned it sho ws an “ Unpin” button.
 
+# Functionality:
+1. Pin the document 
+..* On pin the document, it will be placed first in 1-st column
+2. Unpit the document
+..* On unpin the document, it will be placed pushed last of list
+3.Delete the document
+
+Implemented column design so that we can preserve image aspect ratio and utilize most of space on page without white
+space.
 
 #Technologies/Libraries used:
 1. React
@@ -26,3 +35,4 @@ goto http://localhost:3000
 
 ## TODO
 Need to use middleware and move ajax call in actions. 
+

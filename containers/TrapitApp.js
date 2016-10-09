@@ -2,13 +2,13 @@ var React = require('react');
 var bindActionCreators = require('redux').bindActionCreators;
 var connect=require("react-redux").connect;
 var DocumentList = require('../components/DocumentList');
-var TodoActions = require('../actions/TodoActions');
+var TodoActions = require('../actions/Actions');
 var $ = require('jquery');
 
 var TrapitApp = React.createClass({
   actions: null,
   componentDidMount() {
-    var _this = this;
+    var _that = this;
     // TODO understand Redux better to make ajax call in actions
     $.ajax({
       type: "GET",
@@ -32,8 +32,8 @@ var TrapitApp = React.createClass({
           });
         });
 
-        if (_this.actions) {
-          _this.actions.receivedDocs(entries);
+        if (_that.actions) {
+          _that.actions.receivedDocs(entries);
         }
         
       }
