@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev-start": "node server.js",
-    "postinstall": "./node_modules/.bin/webpack index.js static/bundle.js",
+    "postinstall": "./node_modules/.bin/webpack --config webpack.hero.config.js",
     "start": "./node_modules/.bin/http-server \".\""
   },
   
