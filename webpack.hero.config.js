@@ -1,7 +1,7 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './index.js',
+  entry: 'index.js',
 
   output: {
     path: './static',
@@ -33,12 +33,6 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       { from: './index.html' }
-    ]),
-    new CopyWebpackPlugin([
-      { from: './src/vendors/phaser.min.js' }
-    ]),
-    new CopyWebpackPlugin([
-      { from: './src/assets', to: 'assets' }
     ])
   ],
 
