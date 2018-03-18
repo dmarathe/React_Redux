@@ -1,7 +1,7 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: 'index.js',
+  entry: './index.js',
 
   output: {
     path: './static',
@@ -9,25 +9,14 @@ module.exports = {
   },
 
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-            presets: ['es2015']
-        }
-      },
-      {
-        test: /\.less$/,
-        loader: "style!css!less"
-      },
-      {
-        test: /\.(jpg|png|gif)$/,
-        include: /img/,
-        loader: 'url'
-      },
-    ]
+    loaders: [{
+      test: /\.js$/,
+      loaders: ['react-hot', 'babel'],
+      exclude: /node_modules/
+    }, {
+      test: /\.css?$/,
+      loaders: ['style', 'raw']
+    }]
   },
 
   plugins: [
