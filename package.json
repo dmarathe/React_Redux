@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev-start": "node server.js",
+    "postinstall": "./node_modules/.bin/webpack",
     "start": "./node_modules/.bin/http-server \".\""
   },
   
